@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
 video {
     position: absolute;
     top: 0;
@@ -41,4 +46,310 @@ video {
 header .navbar {
     padding: 0 30px !important;
     border-bottom: 1px solid #dddddd54;
+}
+
+main {
+    
+    background-image: url(https://site.mandabem.com.br/wp-content/themes/brooklyn/images/overlay-pattern.png) !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.initial-page {
+    height: 100vh;
+    z-index: 1000;
+    position: relative;
+    color: red;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.initial-page p {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+} 
+
+
+.initial-page .top {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.initial-page .bottom {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.initial-page .rotate {
+    color: #c6ba9e;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    font-size: 75px;
+}
+.buttons a {
+    font-size: 14px !important;
+    background: rgba(160, 30, 37, 0.8) !important;
+    color: rgba(255, 255, 255, 1) !important;
+    border-width: 1px !important;
+    border-color: rgba(160, 30, 37, 1) !important;
+    line-height: 24px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none !important;
+    font-weight: 500;
+    padding: 1em 2.5em;
+}
+
+.buttons a:last-child {
+    margin-left: 16px;
+}
+
+.hero-section {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.text-content {
+    background-color: #152e3a !important;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    color: #fff;
+    
+    padding-left: 40px;
+    padding-right: 40px;
+    
+}
+
+.text-content .text-bg{
+    background-color: #a01e25;
+}
+
+.text-content .quote{
+    font-family: Raleway;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+    font-style: italic;
+    text-align: center;
+}
+
+.text-btn-content {
+    background-color: rgba(198, 186, 158, 0.8) !important;
+    padding: 35px 20px;
+    font-family: "Raleway";
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: -0.03em;
+    color: rgba(49, 49, 49, 1); 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text-btn-content p{
+    margin-bottom: 0;
+}
+
+.text-btn-content a {
+    color: #ffffff !important;
+    border-color: #e14a33 !important;
+    border-width: 1px !important;
+    background-color: #a01e25 !important;
+    font-size: 18px;
+    padding: 1.05em 2em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.services-content{
+    background-color: #0A1E2D !important;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.services-content h1{
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.services-content h1{
+    font-size: 40px;
+    font-family: Raleway;
+    margin-bottom: 20px;
+}
+
+.line-red{
+    background-color: #A01E25;
+    height: 3px;
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.services-content p{
+    font-size: 17px;
+    font-family: Poppins;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9); 
+}
+
+.service-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    max-width: 400px;
+    background-repeat: no-repeat;
+}
+
+.service-1 {
+    background-image: url(https://site.mandabem.com.br/wp-content/uploads/2023/06/ilustra_conceito_01.png?id=2156
+    ) !important;
+}
+
+.service-2 {
+    background-image: url(https://site.mandabem.com.br/wp-content/uploads/2023/06/ilustra_conceito_02.png?id=2157
+    ) !important;
+}
+
+.service-3 {
+    background-image: url(https://site.mandabem.com.br/wp-content/uploads/2023/06/ilustra_conceito_03.png?id=2155
+    ) !important;
+}
+
+.service-box p{
+    font-size: 35px;
+    font-family: "Raleway";
+    font-weight: 800;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.service-box img{
+    max-width: 170px;
+}
+
+.service-card-content {
+    margin-top: 40px;
+    width: 100%;
+}
+
+
+.integrations-content {
+    background-color: #ffffff;
+    padding-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.integrations-content .title {
+    text-transform: uppercase;
+}
+
+.line-gray {
+    background-color: #d6d6d6a8;
+    height: 1px;
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.carousel-item img {
+    width: 135px !important;
+}
+
+.carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+/* CARROSSEL DE MARCAS */
+
+.brands {
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 90px
+}
+.owl-stage {
+    display: flex !important;
+    align-items: center;
+}
+.owl-loaded {
+    display: flex !important;
+    align-items: center;
+}
+.brands_slider_container {
+    height: 130px;
+    border: solid 1px #e8e8e8;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    padding-left: 97px;
+    padding-right: 97px;
+    background: #fff;
+}
+
+.brands_slider {
+    height: 100%;
+}
+
+.brands_item {
+    height: 100%
+}
+
+.brands_item img {
+    width: 135px !important;
+    height: auto
+}
+
+.brands_nav {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 5px;
+    cursor: pointer
+}
+
+.brands_nav i {
+    color: #e5e5e5;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease
+}
+
+.brands_nav:hover i {
+    color: #676767
+}
+
+.brands_prev {
+    left: 40px
+}
+
+.brands_next {
+    right: 40px
 }

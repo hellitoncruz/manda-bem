@@ -15,7 +15,16 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
 
+
+    
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -28,6 +37,11 @@
         crossorigin="anonymous"></script>
 
     <script src="https://kit.fontawesome.com/e9445bb93e.js" crossorigin="anonymous"></script>
+
+    <script src="jquery.simple-text-rotator.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+
+
 </head>
 
 <body>
@@ -59,9 +73,6 @@
                             <a class="nav-link" href="#">LOGIN</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">DÚVIDAS</a>
-                        </li>
-                        <li class="nav-item">
                             <a target="_blank" href="https://www.instagram.com/vocemandabem/"><span><i
                                         class="fab fa-instagram fa-lg"></i></span></a>
                         </li>
@@ -90,19 +101,250 @@
     </header>
 
     <main>
+        <div class="initial-page">
 
-        <div>
-            <p>AUMENTE AS VENDAS DO SEU</p>
-            <h1>Texto animado</h1>
-            <p>OFERECENDO UM FRETE MAIS BARATO</p>
-            <a href="">SIMULE SEU FRETE</a>
-            <a href="">CADASTRE-SE</a>
+            <div class="hero-section">
+                <p class="top">AUMENTE AS VENDAS DO SEU</p>
+                <h1><span class="rotate">E-COMMERCE, INSTAGRAM, SITE, LOJA, ATACADO, NEGÓCIO</span></h1>
+                <p class="bottom">OFERECENDO UM FRETE MAIS BARATO</p>
+                <div class="buttons">
+                    <a href="">SIMULE SEU FRETE</a>
+                    <a href="">CADASTRE-SE</a>
+                </div>
+
+            </div>
+
+            <video autoplay loop width="100%">
+                <source src="https://site.mandabem.com.br/wp-content/uploads/2023/06/video_slider_04.mp4"
+                    type="video/webm" />
+            </video>
+
         </div>
-        <video autoplay loop width="100%">
-            <source src="https://site.mandabem.com.br/wp-content/uploads/2023/06/video_slider_04.mp4"
-                type="video/webm" />
-        </video>
+        <div class="text-content">
+            <p class="quote">"2 em cada 3 clientes desistem de comprar o seu produto porque o frete é caro.
+                <br>A <span class="text-bg"> Manda Bem</span> é a solução para ter um frete barato e eficiente!"
+            </p>
+        </div>
+
     </main>
+
+    <div class="text-btn-content">
+        <p class="info-text">VENDA MAIS COM FRETES ATÉ 80% MAIS BARATOS
+        </p>
+        <a href="">Eu Quero!</a>
+    </div>
+
+    <div class="services-content">
+        <h1 class="title">POR QUE ESCOLHER A MANDA BEM?</h1>
+        <span class="line"></span>
+        <p class="sub-title">Veja o que fazemos para <strong> SEU NEGÓCIO ESCALAR</strong></p>
+        <div class="service-card-content row">
+            <div class="col-md-4 service-box service-1" id="card1" data-angle="0" data-flipped="false" onclick="flip()">
+                <img src="https://site.mandabem.com.br/wp-content/uploads/2023/06/icone_desconto-1.svg" alt="" />
+                <p>Fretes com até 80% de desconto</p>
+            </div>
+            <div class="col-md-4 service-box service-2" id="card2" data-angle="0" data-flipped="false" onclick="flip()">
+                <img src="https://site.mandabem.com.br/wp-content/uploads/2023/06/icone_logistica-2.svg" alt="" />
+                <p>Logística Reversa</p>
+            </div>
+            <div class="col-md-4 service-box service-3" id="card3" data-angle="0" data-flipped="false" onclick="flip()">
+                <img src="https://site.mandabem.com.br/wp-content/uploads/2023/06/icone_acompanha-1.svg" alt="" />
+                <p>Rastreio</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="integrations-content">
+        <h1 class="title">Integrações</h1>
+        <span class="line-red"></span>
+        <p class="sub-title">Nós temos os melhores players do e-commerce ao nosso lado</p>
+        <span class="line-gray"></span>
+
+
+        <div class="brands">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="brands_slider_container">
+                            <div class="owl-carousel owl-theme brands_slider">
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25"><img
+                                            src="https://site.mandabem.com.br/wp-content/uploads/2024/01/Shopify-Logo.png"
+                                            alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25"><img
+                                            src="https://site.mandabem.com.br/wp-content/uploads/2024/01/DIGITAL-ONE-REDIMENCIONADO-1.png"
+                                            alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25"><img
+                                            src="https://site.mandabem.com.br/wp-content/uploads/2024/02/Yampi-Logotipo-Roxo-RBG-01-1.png"
+                                            alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25"><img
+                                            src="https://site.mandabem.com.br/wp-content/uploads/2024/01/WIX-REDIMENCIONADO-1.png"
+                                            alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25"><img
+                                            src="https://site.mandabem.com.br/wp-content/uploads/2023/06/integracao_nuvem-1.png"
+                                            alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25"><img
+                                            src="https://site.mandabem.com.br/wp-content/uploads/2023/06/integracao_loja_int-1.png"
+                                            alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25"><img
+                                            src="https://site.mandabem.com.br/wp-content/uploads/2024/02/Yampi-Logotipo-Roxo-RBG-01-1.png"
+                                            alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25"><img
+                                            src="https://site.mandabem.com.br/wp-content/uploads/2023/06/integracao_nuvem-1.png"
+                                            alt=""></div>
+                                </div>
+                            </div> <!-- Brands Slider Navigation -->
+                            <div class="brands_nav brands_prev"><i class="fas fa-chevron-left"></i></div>
+                            <div class="brands_nav brands_next"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="integrations-content">
+        <h1 class="title">Nossos parceiros</h1>
+        <span class="line-red"></span>
+
+
+        <div class="brands">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="brands_slider_container">
+                            <div class="owl-carousel owl-theme brands_slider">
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25"><img
+                                            src="https://site.mandabem.com.br/wp-content/uploads/2024/01/Shopify-Logo.png"
+                                            alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25"><img
+                                            src="https://site.mandabem.com.br/wp-content/uploads/2024/01/DIGITAL-ONE-REDIMENCIONADO-1.png"
+                                            alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25"><img
+                                            src="https://site.mandabem.com.br/wp-content/uploads/2024/02/Yampi-Logotipo-Roxo-RBG-01-1.png"
+                                            alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25"><img
+                                            src="https://site.mandabem.com.br/wp-content/uploads/2024/01/WIX-REDIMENCIONADO-1.png"
+                                            alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25"><img
+                                            src="https://site.mandabem.com.br/wp-content/uploads/2023/06/integracao_nuvem-1.png"
+                                            alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25"><img
+                                            src="https://site.mandabem.com.br/wp-content/uploads/2023/06/integracao_loja_int-1.png"
+                                            alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25"><img
+                                            src="https://site.mandabem.com.br/wp-content/uploads/2024/02/Yampi-Logotipo-Roxo-RBG-01-1.png"
+                                            alt=""></div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25"><img
+                                            src="https://site.mandabem.com.br/wp-content/uploads/2023/06/integracao_nuvem-1.png"
+                                            alt=""></div>
+                                </div>
+                            </div> <!-- Brands Slider Navigation -->
+                            <div class="brands_nav brands_prev"><i class="fas fa-chevron-left"></i></div>
+                            <div class="brands_nav brands_next"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="text-btn-content">
+        <p class="info-text">Tem uma solução e quer integrar conosco?
+        </p>
+        <a href="">Seja Parceiro</a>
+    </div>
+
+    <script>
+
+        // FUNÇÃO DO TITULO ANIMADO NO MAIN
+        $(".rotate").textrotator({
+            animation: "dissolve", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
+            separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
+            speed: 2000 // How many milliseconds until the next word show.
+        });
+
+        // FUNÇÃO PARA GIRAR OS CARDS
+        $(function () {
+            $("#card1, #card2, #card3").hover(
+                function () {
+                    let isFlipped = $(this).data('flipped');
+                    $($(this)).data('flipped', !isFlipped);
+                    if (isFlipped) $(this).css('transform', 'rotateY(0deg)');
+                    else $(this).css('transform', 'rotateY(180deg)');
+                }
+            );
+        });
+
+        // FUNÇÃO DO CARROSSEL DE MARCAS
+        $(document).ready(function () {
+
+            if ($('.brands_slider').length) {
+                var brandsSlider = $('.brands_slider');
+
+                brandsSlider.owlCarousel(
+                    {
+                        loop: true,
+                        autoplay: true,
+                        autoplayTimeout: 5000,
+                        nav: false,
+                        dots: false,
+                        autoWidth: true,
+                        items: 8,
+                        margin: 42
+                    });
+
+                if ($('.brands_prev').length) {
+                    var prev = $('.brands_prev');
+                    prev.on('click', function () {
+                        brandsSlider.trigger('prev.owl.carousel');
+                    });
+                }
+
+                if ($('.brands_next').length) {
+                    var next = $('.brands_next');
+                    next.on('click', function () {
+                        brandsSlider.trigger('next.owl.carousel');
+                    });
+                }
+            }
+
+
+        });
+    </script>
 </body>
 
 </html>
