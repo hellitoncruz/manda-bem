@@ -49,7 +49,7 @@
         <div class="container" id="nav-container">
             <nav class="navbar navbar-expand-lg fixed-top">
                 <a class="navbar-brand" href="#">
-                    <img id="logo-white" src="/logo_manda_bem_white_200-2.png" width="140" height="65" alt="">
+                    <img id="logo-img" src="https://site.mandabem.com.br/wp-content/uploads/2023/06/logo_manda_bem_white_200-2.png" width="140" height="65" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -310,11 +310,11 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                         A Manda Bem é uma transportadora?
                     </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
 
@@ -563,6 +563,41 @@
 
 
         });
+    
+        
+        // Função para verificar a posição de rolagem e ajustar a navbar 
+        var onTop = false;
+
+        function checkScrollPosition() {
+        let scrollPosition = $(window).scrollTop();
+        
+        if(scrollPosition < 540 && !onTop) {
+            onTop = true;
+            $('.navbar').addClass('onTop');
+            $('#logo-img').attr("src", "https://site.mandabem.com.br/wp-content/uploads/2023/06/logo_manda_bem_white_200-2.png")
+        }
+        
+        if(scrollPosition >= 540 && onTop) {
+            onTop = false;
+            $('.navbar').removeClass('onTop');
+            $('#logo-img').attr("src", "https://site.mandabem.com.br/wp-content/uploads/2023/06/logo_manda_bem_200-2.png").load(function(){
+            $(this).width(); // this is how you get new width of image
+            });
+            
+        }
+        }
+
+        // JQuery
+        $(window).scroll(function() {
+            checkScrollPosition();
+        });
+
+        // Verifica a posição de rolagem no carregamento da página
+        $(document).ready(function() {
+            checkScrollPosition();
+        });
+
+    
     </script>
 </body>
 

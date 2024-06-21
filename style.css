@@ -13,10 +13,18 @@ video {
     opacity: 1;
 }
 
+.navbar {
+    transition: background-color .4s ease-in-out;
+    background: #fff;
+}
+
+.onTop {
+    background-color: transparent;
+  }
+
 .navbar .nav-item{
     display: flex;
     align-items: center;
-    
 }
 
 .navbar i {
@@ -27,17 +35,31 @@ video {
     font-family: "Poppins", sans-serif;
     font-size: 13px;
     font-weight: 600;
-    font-size: 13px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    padding: 0 !important;
+    margin: 0 15px;
+    color: #ffffffb3;
 }
 
 .navbar .nav-link, .navbar i{
-    color: rgba(255, 255, 255, 0.7);
+    color: #151515;
     padding: 0 !important;
     margin: 0 15px;
-    
 }
+
+.onTop .nav-link, .onTop i {
+    color: #ffffffb3;
+}
+
+.show-logo {
+    display: block;
+}
+
+.hide-logo {
+    display: none;
+}
+
 
 .navbar .nav-link:hover, .navbar i:hover{
     color: rgb(255, 255, 255);
@@ -311,11 +333,10 @@ main {
 }
 .brands_slider_container {
     height: 130px;
-    border: solid 1px #e8e8e8;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
     padding-left: 97px;
     padding-right: 97px;
     background: #fff;
+    position: relative;
 }
 
 .brands_slider {
@@ -332,8 +353,8 @@ main {
 }
 
 .brands_nav {
-    position: absolute;
     top: 50%;
+    position: absolute;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -344,12 +365,19 @@ main {
 }
 
 .brands_nav i {
-    color: #e5e5e5;
+    color: #151515;
+    border: 1px solid #ddd !important;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
-    transition: all 200ms ease
+    transition: all 200ms ease;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .brands_nav:hover i {
