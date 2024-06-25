@@ -99,14 +99,20 @@ header .navbar {
     border-bottom: 1px solid #dddddd54;
 }
 
+header .fixed-top {
+    padding: 0 !important;
+    border-bottom: 1px solid #dddddd54;
+}
+
+
+
+
+
 @media (max-width: 768px) {
     header .navbar {
         padding: 0 20px !important;
     }
 
-    /* .navbar .bi-list::before {
-        color: #FFF;
-    } */
 }
 
 #logo-img-desk {
@@ -252,6 +258,12 @@ main {
     }
 }
 
+#menu-icon {
+    max-height: 60px;
+    align-items: center;
+    display: flex;
+}
+
 #menu-icon i {
     color: #151515;
 }
@@ -346,9 +358,20 @@ main {
     font-style: normal;
 }
 
+
+
 @media (max-width: 768px) {
     .text-content .quote {
         margin-bottom: 40px;
+        
+    }
+
+    .bottom-quote-container {
+        padding: 35px 20px 40px 20px !important;
+    }
+    
+    .bottom-quote-container .bottom-quote {
+        padding: 0 !important;
     }
 }
 
@@ -514,6 +537,21 @@ main {
     margin-top: 40px;
     width: 100%;
     justify-content: center;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-item img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.carousel-caption {
+    position: static;
+    color: #000;
 }
 
 
@@ -779,6 +817,10 @@ footer section .col-md-2 {
     }
 }
 
+footer .row .social-icons {
+    padding: 0;
+}
+
 footer .row .social-icons i {
     color: rgb(51, 51, 51);
     font-size: 30px;
@@ -788,7 +830,7 @@ footer .row .social-icons i {
 }
 
 footer .row .social-icons .text-uppercase {
-    font-family: "Poppins";
+    font-family: Poppins;
     font-weight: 600 !important;
     font-size: 13px;
     letter-spacing: 0.05em;
@@ -1046,7 +1088,7 @@ footer .link-txt:hover {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1440px) {
     .review-carousel .no-img,
     .review-carousel .carousel-item {
         padding: 0 20px !important;
@@ -1169,6 +1211,23 @@ footer .link-txt:hover {
 #data-area .title {
     font-weight: 800;
 }
+
+@media (max-width: 768px) {
+    #data-area .title {
+        text-align: center;
+    }
+    #data-area .row {
+        justify-content: center;
+    }
+}
+
+/* ------------------------ */
+
+
+
+
+
+
 
 
 .partners .title,
@@ -1415,4 +1474,19 @@ footer .link-txt:hover {
 .row-separate {
     background-color: rgba(198, 186, 158, 0.4) !important;
     height: 35px;
+}
+
+
+/* CARREGAMENTO DOS COMPONENTES */
+.mostrar{
+	opacity: 0;
+}
+/* ---------------------------- */
+
+
+.overlay {
+    background-image: url(https://site.mandabem.com.br/wp-content/themes/brooklyn/images/overlay-pattern.png) !important;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
