@@ -126,14 +126,15 @@ header .container {
         top: 0;
     }
 
-    .navbar .navbar-nav{
+    .navbar .navbar-nav {
         width: 375px;
         padding: 0 20px;
         list-style: circle;
     }
 
-    .navbar .nav-link, .navbar i{
-        color: rgba(20, 20, 20, 0.5) ;
+    .navbar .nav-link,
+    .navbar i {
+        color: rgba(20, 20, 20, 0.5);
     }
 
 }
@@ -204,13 +205,13 @@ main {
 @media (min-width: 1440px) {
     .initial-page .rotate {
         font-size: 100px;
-    } 
+    }
 }
 
 @media (max-width: 1440px) {
     .initial-page .rotate {
         font-size: 75px;
-    } 
+    }
 }
 
 @media (max-width: 1024px) {
@@ -240,7 +241,7 @@ main {
     .initial-page .rotate {
         font-size: 35px;
         line-height: 35px;
-        
+
     }
 
     .hero-section .buttons {
@@ -516,6 +517,10 @@ main {
     padding: 40px !important;
 }
 
+.bottom-quote-container {
+    padding: 0 !important;
+}
+
 .services-content {
     background-color: #0A1E2D !important;
     padding-top: 120px;
@@ -548,7 +553,7 @@ main {
         text-align: center;
     }
 
-    .services-content .service-box p{
+    .services-content .service-box p {
         font-size: 30px;
     }
 
@@ -574,7 +579,7 @@ main {
     margin-top: 40px;
     width: 100%;
     justify-content: center;
-} 
+}
 
 
 
@@ -747,7 +752,7 @@ main {
         align-items: center;
         display: flex;
         justify-content: center;
-    
+
     }
 
     .brands_slider_container .owl-item {
@@ -1159,6 +1164,41 @@ footer .link-txt:hover {
     padding-right: 0 !important;
 }
 
+.review-carousel .no-img .carousel-caption .name,
+    .review-carousel .carousel-caption h2 {
+        text-align: center;
+        display: flex;
+        text-align: center;
+    }
+
+    .review-carousel .carousel-caption .name i {
+        display: flex;
+        align-items: center;
+    }
+
+    .review-carousel .carousel-caption i {
+        margin-right: 20px;
+    }
+
+    .review-carousel .name-container i::before,
+    .review-carousel .carousel-caption .name i::before {
+        color: #a01e25;
+        font-size: 32px;
+        rotate: 270deg;
+
+    }
+
+    .review-carousel .name-container {
+        display: flex;
+    }
+
+    .review-carousel .carousel-caption .name h3 {
+        text-align: center;
+        margin-bottom: 0 !important;
+        display: flex;
+        align-items: center;
+    }
+
 
 
 @media (max-width: 1440px) {
@@ -1183,12 +1223,42 @@ footer .link-txt:hover {
 
     .review-carousel .no-img,
     .review-carousel .carousel-item {
-        height: 550px;
+        height: 630px;
     }
 
-    .review-carousel .carousel-caption .name,
+    .review-carousel .no-img .carousel-caption .name,
     .review-carousel .carousel-caption h2 {
         text-align: center;
+        display: flex;
+        text-align: center;
+    }
+
+    .review-carousel .carousel-caption .name i {
+        display: flex;
+        align-items: center;
+    }
+
+    .review-carousel .carousel-caption i {
+        margin-right: 20px;
+    }
+
+    .review-carousel .name-container i::before,
+    .review-carousel .carousel-caption .name i::before {
+        color: #a01e25;
+        font-size: 32px;
+        rotate: 270deg;
+
+    }
+
+    .review-carousel .name-container {
+        display: flex;
+    }
+
+    .review-carousel .carousel-caption .name h3 {
+        text-align: center;
+        margin-bottom: 0 !important;
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -1316,6 +1386,7 @@ footer .link-txt:hover {
 
 
 @media (max-width: 768px) {
+
     .partners .title,
     .brands .title {
         font-size: 30px;
@@ -1333,85 +1404,6 @@ footer .link-txt:hover {
         padding: 80px 0 0 0;
     }
 }
-
-
-
-
-
-
-
-/* FLIP CONTAINER */
-/* .flip_container {
-    margin: 0 auto;
-    height: 450px;
-    cursor: pointer;
-    padding: 0;
-}
-
-.flip_container:hover .flip {
-    -webkit-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
-
-}
-
-.flip_container:hover .flip_front p {
-    opacity: 0;
-}
-
-.flip {
-    -webkit-transition: 0.75s;
-    transition: 0.75s;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    position: relative;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.flip_front,
-.flip_back {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.flip_front {
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-    display: contents;
-}
-
-.flip_back {
-    -webkit-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: rgba(10, 30, 45, 0.8);
-}
-
-.flip_container .card {
-    background: transparent;
-}
-
-.flip_back .card {
-    height: 100%;
-
-}
-
-.flip_container .card {
-    border: none;
-} */
-
-
-
 
 
 
@@ -1434,7 +1426,7 @@ footer .link-txt:hover {
     justify-content: center;
 }
 
-.services-content .col {
+.services .col {
     width: calc(50% - 2rem);
     cursor: pointer;
 }
@@ -1463,7 +1455,7 @@ footer .link-txt:hover {
     height: auto;
     color: #fff;
     font-size: 1.5rem;
-    
+
 }
 
 .services-content .front::after {
@@ -1551,7 +1543,7 @@ footer .link-txt:hover {
 
 .services-content .container .front .inner {
     opacity: 1;
-    transition: opacity .7s cubic-bezier(.4,.2,.2,1);
+    transition: opacity .7s cubic-bezier(.4, .2, .2, 1);
 }
 
 .services-content .container:hover .front .inner {
@@ -1561,7 +1553,7 @@ footer .link-txt:hover {
 
 .services-content .container .back .inner {
     opacity: 0;
-    transition: opacity .7s cubic-bezier(.4,.2,.2,1);
+    transition: opacity .7s cubic-bezier(.4, .2, .2, 1);
 }
 
 .services-content .container:hover .back .inner {
@@ -1581,7 +1573,7 @@ footer .link-txt:hover {
 }
 
 .services-content .front .inner p {
-    
+
     margin-bottom: 2rem;
     position: relative;
 }
@@ -1620,9 +1612,11 @@ footer .link-txt:hover {
     .services-content .cols {
         flex-direction: column;
     }
+
     .services-content .col {
         width: unset;
     }
+
     .services-content .wrapper {
         width: 100% !important;
         padding: 0;
@@ -1643,140 +1637,113 @@ footer .link-txt:hover {
 
 /* PREMIOS */
 
-.award-1 {
-    background-image: url(https://site.mandabem.com.br/wp-content/uploads/2023/06/ilustra_conceito_numeros-2.svg?id=2735) !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-}
 
-.award-2 {
-    background-image: url(https://site.mandabem.com.br/wp-content/uploads/2023/06/SELO_STW2021_valendo.png) !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-}
 
 .awards {
     background-color: #152e3a !important;
 }
 
-.awards .card {
-    width: 100%;
+.awards .container .back {
+    -webkit-transform: rotateX(-180deg) !important;
+    transform: rotateX(-180deg) !important;
 }
 
-.awards .flip_container:first-child {
-    width: 60%;
+.awards .container .front {
+    -webkit-transform: rotateX(0deg) !important;
+    transform: rotateX(0deg) !important;
 }
 
-.awards .flip_back .card h4 {
-    font-family: "Poppins";
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 30px;
-    color: #ffffff;
+
+.awards .container:hover .back {
+    -webkit-transform: rotateX(0deg) !important;
+    transform: rotateX(0deg) !important;
 }
 
-.awards .flip_back .card p {
+.awards .container:hover .front {
+    -webkit-transform: rotateX(180deg) !important;
+    transform: rotateX(180deg) !important;
+}
+
+.awards .inner img{
+    height: 282px !important;
+    width: 223px !important;
+}
+/* 
+.services-content .front .inner img {
+    width: 165px;
+    height: 165px;
+} */
+
+
+.awards .award1 {
+    background-image: url(https://site.mandabem.com.br/wp-content/uploads/2023/06/ilustra_conceito_numeros-2.svg?id=2735
+) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.awards .award2 {
+    background-image: url(https://site.mandabem.com.br/wp-content/uploads/2023/06/ilustra_conceito_premio-2.svg?id=2740) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+.awards .front .inner  p {
+    font-family: "Raleway";
+    font-weight: 800 !important;
+    font-size: 35px !important;
+    line-height: 30px !important;
+    letter-spacing: -0.01em;
+}
+
+.awards .back .inner  p {
     font-family: "Poppins";
     font-weight: 500;
     font-size: 15px;
     line-height: 30px;
 }
 
-.awards .flip_back {
-    background: unset;
+.awards .back .inner h4 {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
 }
 
-.awards .card-body {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+.awards .front .inner p {
+    background-color: unset !important;
 }
 
-.award-2 {
-    height: 282px;
-    width: 223px;
+.awards svg path {
+    stroke: #a01e25 !important;
 }
 
-.awards .flip_container {
-    margin: 0 auto;
-    height: 450px;
-    cursor: pointer;
-    padding: 0;
-}
-
-.awards .awards .flip_container:hover .flip {
-    -webkit-transform: rotateX(180deg);
-    transform: rotateX(180deg);
-
-}
-
-.awards .flip_container:hover .flip_front p {
-    opacity: 0;
-}
-
-.awards .flip {
-    -webkit-transition: 0.75s;
-    transition: 0.75s;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    position: relative;
-    height: 100%;
+.awards .container-svg {
+    background-color: #152e3a;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.awards .flip_front,
-.awards .flip_back {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
+.awards .col-sm-4 .back{
+    min-height: 414px !important;
 }
 
-.awards .flip_front {
-    -webkit-transform: rotateX(0deg);
-    transform: rotateX(0deg);
-    display: contents;
-}
-
-.awards .flip_back {
-    -webkit-transform: rotateX(180deg);
-    transform: rotateX(180deg);
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: rgba(10, 30, 45, 0.8);
-}
-
-.awards .flip_container .card {
-    background: transparent;
-}
-
-.awards .flip_back .card {
-    height: 100%;
+.awards .award2 {
 
 }
 
-.awards .flip_container .card {
-    border: none;
+@media(max-width: 768px) {
+    .awards .col {
+        margin: 88px 20px;
+    }
+
+
 }
 
-.awards .award1 {
-    background-image: url(https://site.mandabem.com.br/wp-content/uploads/2023/06/ilustra_conceito_numeros-2.svg?id=2735
-) !important;
-background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-}
-
-.awards .cols 
 
 
 /* Carousel parceiros */
@@ -1832,16 +1799,17 @@ background-position: center !important;
 
 /* -------------------------------- */
 
-@media (max-width: 992px){
+@media (max-width: 992px) {
     #navbarNav {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
         opacity: 0;
     }
-    
+
     #navbarNav.show {
-        max-height: 100vh; /* Ajuste conforme o tamanho do conteúdo do menu */
+        max-height: 100vh;
+        /* Ajuste conforme o tamanho do conteúdo do menu */
         opacity: 1;
     }
 
@@ -1850,4 +1818,3 @@ background-position: center !important;
         z-index: 1;
     }
 }
-    
