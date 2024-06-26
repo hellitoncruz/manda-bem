@@ -96,21 +96,44 @@ video {
 
 header .navbar {
     padding: 0 30px !important;
-    border-bottom: 1px solid #dddddd54;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 header .fixed-top {
     padding: 0 !important;
-    border-bottom: 1px solid #dddddd54;
 }
 
-
-
+header .container {
+    max-width: unset !important;
+}
 
 
 @media (max-width: 768px) {
     header .navbar {
         padding: 0 20px !important;
+    }
+
+    .onTop i {
+        color: #ffffff;
+    }
+
+    .navbar .show {
+        width: 100vw;
+        height: 100vh;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .navbar .navbar-nav{
+        width: 375px;
+        padding: 0 20px;
+        list-style: circle;
+    }
+
+    .navbar .nav-link, .navbar i{
+        color: rgba(20, 20, 20, 0.5) ;
     }
 
 }
@@ -169,26 +192,55 @@ main {
     color: rgba(255, 255, 255, 0.7);
 }
 
-@media (max-width: 768px) {
-
-    .initial-page .top,
-    .initial-page .bottom {
-        font-size: 13px;
-    }
-}
-
 .initial-page .rotate {
     color: #c6ba9e;
     letter-spacing: -0.03em;
     text-transform: uppercase;
     word-wrap: break-word;
     font-size: 100px;
+    font-weight: 800;
+}
+
+@media (min-width: 1440px) {
+    .initial-page .rotate {
+        font-size: 100px;
+    } 
+}
+
+@media (max-width: 1440px) {
+    .initial-page .rotate {
+        font-size: 75px;
+    } 
+}
+
+@media (max-width: 1024px) {
+    .initial-page .rotate {
+        font-size: 62px;
+    }
 }
 
 @media (max-width: 768px) {
     .initial-page .rotate {
+        font-size: 44px;
+    }
+
+    .initial-page .top,
+    .initial-page .bottom {
+        font-size: 13px;
+    }
+
+    .initial-page .top {
+        font-weight: 700;
+    }
+
+    .initial-page .bottom {
+        font-weight: 400;
+    }
+
+    .initial-page .rotate {
         font-size: 35px;
         line-height: 35px;
+        
     }
 
     .hero-section .buttons {
@@ -198,6 +250,13 @@ main {
         justify-content: center;
     }
 }
+
+@media (max-width: 500px) {
+    .initial-page .rotate {
+        font-size: 35px;
+    }
+}
+
 
 .hero-section .buttons a {
     font-size: 14px !important;
@@ -233,6 +292,7 @@ main {
 
     .hero-section .buttons a {
         font-size: 1em !important;
+        padding: 0.8em 1.4em !important;
     }
 }
 
@@ -258,19 +318,35 @@ main {
     }
 }
 
-#menu-icon {
-    max-height: 60px;
-    align-items: center;
-    display: flex;
-}
+
 
 #menu-icon i {
     color: #151515;
 }
 
 .menu-icon-changed i {
-
     color: #ffffff !important;
+}
+
+.menu-icon-opened i {
+    color: #151515 !important;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        max-height: 60px;
+        align-items: center;
+        display: flex;
+    }
+
+    #nav-container .navbar-toggler:focus {
+        box-shadow: unset !important;
+    }
+
+    #nav-container .bi-list:hover::after {
+        width: 0 !important;
+    }
 }
 
 
@@ -363,13 +439,13 @@ main {
 @media (max-width: 768px) {
     .text-content .quote {
         margin-bottom: 40px;
-        
+
     }
 
     .bottom-quote-container {
         padding: 35px 20px 40px 20px !important;
     }
-    
+
     .bottom-quote-container .bottom-quote {
         padding: 0 !important;
     }
@@ -591,6 +667,7 @@ main {
 
 
 
+
 /* CARROSSEL DE MARCAS */
 
 .brands {
@@ -686,12 +763,41 @@ main {
 }
 
 .brands_prev {
-    left: 40px
+    left: 0 !important;
 }
 
 .brands_next {
-    right: 40px
+    right: 0 !important;
 }
+
+.brands_slider_container {
+    padding-left: 60px;
+    padding-right: 60px
+}
+
+
+@media(max-width: 768px) {
+    .brands_slider_container .owl-carousel .owl-stage-outer {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    
+    }
+
+    .brands_slider_container .owl-item {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .brands_slider_container .owl-item .owl-item {
+        align-items: unset !important;
+        display: unset !important;
+        justify-content: unset !important;
+    }
+}
+
+
 
 
 /* ACCORDION */
@@ -908,6 +1014,7 @@ footer .link-txt:hover {
     z-index: 10000;
     bottom: 0;
     position: absolute;
+    left: 50%;
 }
 
 
@@ -923,7 +1030,7 @@ footer .link-txt:hover {
 }
 
 .arrow-down a {
-    color: #FFFFFF;
+    color: #c4c4c4;
 }
 
 .bi-chevron-double-down::before {
@@ -1032,7 +1139,7 @@ footer .link-txt:hover {
     font-family: "Raleway";
     font-weight: 400;
     font-style: italic;
-    font-size: 28px;   
+    font-size: 28px;
 }
 
 .review-carousel .carousel-pagination {
@@ -1089,6 +1196,7 @@ footer .link-txt:hover {
 
 
 @media (max-width: 1440px) {
+
     .review-carousel .no-img,
     .review-carousel .carousel-item {
         padding: 0 20px !important;
@@ -1106,6 +1214,7 @@ footer .link-txt:hover {
 }
 
 @media (max-width: 640px) {
+
     .review-carousel .no-img,
     .review-carousel .carousel-item {
         height: 550px;
@@ -1216,16 +1325,13 @@ footer .link-txt:hover {
     #data-area .title {
         text-align: center;
     }
+
     #data-area .row {
         justify-content: center;
     }
 }
 
 /* ------------------------ */
-
-
-
-
 
 
 
@@ -1242,6 +1348,25 @@ footer .link-txt:hover {
     text-align: center;
 }
 
+
+@media (max-width: 768px) {
+    .partners .title,
+    .brands .title {
+        font-size: 30px;
+    }
+
+    .brands .sub-title {
+        font-size: 18px;
+    }
+
+    .brands .container {
+        padding: 0 20px;
+    }
+
+    .integrations {
+        padding: 80px 0 0 0;
+    }
+}
 
 
 
@@ -1478,9 +1603,10 @@ footer .link-txt:hover {
 
 
 /* CARREGAMENTO DOS COMPONENTES */
-.mostrar{
-	opacity: 0;
+.mostrar {
+    opacity: 0;
 }
+
 /* ---------------------------- */
 
 
@@ -1489,4 +1615,20 @@ footer .link-txt:hover {
     width: 100%;
     height: 100%;
     position: absolute;
+}
+
+
+
+/* -------------------------------- */
+
+#navbarNav {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+#navbarNav.show {
+    max-height: 100vh; /* Ajuste conforme o tamanho do conteúdo do menu */
+    opacity: 1;
 }

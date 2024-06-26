@@ -66,11 +66,14 @@
                         src="https://site.mandabem.com.br/wp-content/uploads/2023/06/logo_manda_bem_white_200-2.png"
                         width="65" height="30" alt="">
                 </a>
-                <button id="menu-icon" data-mdb-button-init class="navbar-toggler" type="button" data-mdb-collapse-init
-                    data-mdb-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+
+
+                <button id="menu-icon" class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="bi bi-list"></i>
                 </button>
+
+                
+
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
@@ -133,12 +136,11 @@
                     <i class="bi bi-chevron-double-down"></i>
                 </a>
             </div>
-            <video autoplay loop width="100%">
+            <video class="mostrar" autoplay loop width="100%" muted>
                 <source src="https://site.mandabem.com.br/wp-content/uploads/2023/06/video_slider_04.mp4"
                     type="video/webm" />
             </video>
             <div class="overlay">
-                
             </div>
         </div>
     </main>
@@ -170,7 +172,7 @@
 
     <div class="services-content">
         <h1 class="title">POR QUE ESCOLHER A MANDA BEM?</h1>
-        <span class="line"></span>
+        <span class="line-red"></span>
         <p class="sub-title">Veja o que fazemos para <strong> SEU NEGÓCIO ESCALAR</strong></p>
         <div class="container">
             <div class="row">
@@ -256,11 +258,7 @@
     </div>
 
     <div class="carousel-container integrations">
-
-
-
         <div class="brands">
-
             <div class="container">
                 <h1 class="title">Integrações</h1>
                 <span class="line-red"></span>
@@ -1078,6 +1076,25 @@
 
     <script>
 
+$(document).ready(function () {
+    $('#menu-icon').on('click', function () {
+        var $navbarNav = $('#navbarNav');
+        
+        if ($navbarNav.hasClass('show')) {
+            $navbarNav.removeClass('show');
+        } else {
+            $navbarNav.addClass('show');
+        }
+    });
+});
+
+
+
+
+
+        // -------------------------------------------k
+
+
         // FUNÇÃO DO TITULO ANIMADO NO MAIN
         $(".rotate").textrotator({
             animation: "dissolve", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
@@ -1088,40 +1105,43 @@
         // -----------------------------------------------------------
 
         // FUNÇÃO DO CARROSSEL DE MARCAS
-        $(document).ready(function () {
+            $(document).ready(function () {
+                if ($('.brands_slider').length) {
+                    var brandsSlider = $('.brands_slider');
 
-            if ($('.brands_slider').length) {
-                var brandsSlider = $('.brands_slider');
-
-                brandsSlider.owlCarousel(
-                    {
+                    brandsSlider.owlCarousel({
                         loop: true,
                         autoplay: true,
                         autoplayTimeout: 5000,
                         nav: false,
                         dots: false,
                         autoWidth: true,
-                        items: 8,
-                        margin: 42
+                        responsive: {
+                            0: {
+                                items: 1,
+                                autoWidth: false // Exibe 1 item em telas pequenas (mobile)
+                            },
+                            768: {
+                                items: 6 // Exibe 6 itens em telas maiores
+                            }
+                        }
                     });
 
-                if ($('.brands_prev').length) {
-                    var prev = $('.brands_prev');
-                    prev.on('click', function () {
-                        brandsSlider.trigger('prev.owl.carousel');
-                    });
+                    if ($('.brands_prev').length) {
+                        var prev = $('.brands_prev');
+                        prev.on('click', function () {
+                            brandsSlider.trigger('prev.owl.carousel');
+                        });
+                    }
+
+                    if ($('.brands_next').length) {
+                        var next = $('.brands_next');
+                        next.on('click', function () {
+                            brandsSlider.trigger('next.owl.carousel');
+                        });
+                    }
                 }
-
-                if ($('.brands_next').length) {
-                    var next = $('.brands_next');
-                    next.on('click', function () {
-                        brandsSlider.trigger('next.owl.carousel');
-                    });
-                }
-            }
-
-
-        });
+            });
 
         // -----------------------------------------------------------
 
@@ -1263,6 +1283,10 @@
             });
 
         // ------------------------------------------
+
+        $(document).ready(function() {
+        $(".dropdown-toggle").dropdown();
+        });
     </script>
 </body>
 
