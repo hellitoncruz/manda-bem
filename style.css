@@ -322,16 +322,14 @@ main {
 
 #menu-icon i {
     color: #151515;
+    z-index: 1;
 }
 
 .menu-icon-changed i {
     color: #ffffff !important;
-}
-
-.menu-icon-opened i {
-    color: #151515 !important;
     z-index: 1;
 }
+
 
 @media (max-width: 768px) {
     #menu-icon {
@@ -549,6 +547,14 @@ main {
         padding-right: 20px;
         text-align: center;
     }
+
+    .services-content .service-box p{
+        font-size: 30px;
+    }
+
+    .card-body .service-box {
+        padding: 0px !important;
+    }
 }
 
 .line-red {
@@ -559,7 +565,7 @@ main {
     margin: 0 auto 20px;
 }
 
-.services-content p {
+/* .services-content p {
     font-size: 17px;
     font-family: Poppins;
     font-weight: 400;
@@ -572,24 +578,11 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 40px !important;
     background-repeat: no-repeat;
 }
 
-.service-1 {
-    background-image: url(https://site.mandabem.com.br/wp-content/uploads/2023/06/ilustra_conceito_01.png?id=2156
-) !important;
-}
 
-.service-2 {
-    background-image: url(https://site.mandabem.com.br/wp-content/uploads/2023/06/ilustra_conceito_02.png?id=2157
-) !important;
-}
-
-.service-3 {
-    background-image: url(https://site.mandabem.com.br/wp-content/uploads/2023/06/ilustra_conceito_03.png?id=2155
-) !important;
-}
 
 .service-box p {
     font-size: 35px;
@@ -603,7 +596,7 @@ main {
 .flip_front .service-box p {
     background-color: rgba(13, 30, 44, 0.85) !important;
 }
-
+*/
 
 .service-box img {
     max-width: 170px;
@@ -613,7 +606,12 @@ main {
     margin-top: 40px;
     width: 100%;
     justify-content: center;
-}
+} 
+
+
+
+
+
 
 .carousel-item {
     text-align: center;
@@ -1375,7 +1373,7 @@ footer .link-txt:hover {
 
 
 /* FLIP CONTAINER */
-.flip_container {
+/* .flip_container {
     margin: 0 auto;
     height: 450px;
     cursor: pointer;
@@ -1442,7 +1440,187 @@ footer .link-txt:hover {
 
 .flip_container .card {
     border: none;
+} */
+
+
+
+
+
+
+/* flip parallax */
+
+.services-content .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 80rem;
 }
+
+.services-content .cols {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.services-content .col {
+    width: calc(50% - 2rem);
+    cursor: pointer;
+}
+
+.services-content .container {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective: preserve-3d;
+    perspective: preserve-3d;
+    padding: 0 !important;
+}
+
+.services-content .front,
+.services-content .back {
+    background-size: cover;
+    background-position: center;
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    text-align: center;
+    min-height: 350px;
+    height: auto;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    background: #0A1E2D
+}
+
+.services-content .back {
+    
+}
+
+.services-content .front::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    opacity: .6;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.services-content .container:hover .front,
+.services-content .container:hover .back {
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.services-content .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.services-content .inner {
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+    perspective: inherit;
+    z-index: 2;
+}
+
+.services-content .container .back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.services-content .container .front {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+
+.services-content .container:hover .back {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.services-content .container:hover .front {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.services-content .front .inner p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.services-content .front .inner p::after {
+    content: "";
+    width: 4rem;
+    height: 2px;
+    position: absolute;
+    background: #c6d4df;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -.75rem;
+}
+
+.services-content .front .inner img {
+    width: 165px;
+    height: 165px;
+}
+
+.services-content .service1 {
+    background-image: url(https://site.mandabem.com.br/wp-content/uploads/2023/06/ilustra_conceito_01.png?id=2156
+) !important;
+}
+
+.services-content .service2 {
+    background-image: url(https://site.mandabem.com.br/wp-content/uploads/2023/06/ilustra_conceito_02.png?id=2157
+) !important;
+}
+
+.services-content .service3 {
+    background-image: url(https://site.mandabem.com.br/wp-content/uploads/2023/06/ilustra_conceito_03.png?id=2155
+) !important;
+}
+
+/* ----------- */
+
+
 
 
 
@@ -1610,6 +1788,8 @@ footer .link-txt:hover {
 /* ---------------------------- */
 
 
+/* background escuro */
+
 .overlay {
     background-image: url(https://site.mandabem.com.br/wp-content/themes/brooklyn/images/overlay-pattern.png) !important;
     width: 100%;
@@ -1621,14 +1801,22 @@ footer .link-txt:hover {
 
 /* -------------------------------- */
 
-#navbarNav {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    opacity: 0;
-}
+@media (max-width: 992px){
+    #navbarNav {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        opacity: 0;
+    }
+    
+    #navbarNav.show {
+        max-height: 100vh; /* Ajuste conforme o tamanho do conteúdo do menu */
+        opacity: 1;
+    }
 
-#navbarNav.show {
-    max-height: 100vh; /* Ajuste conforme o tamanho do conteúdo do menu */
-    opacity: 1;
+    .menu-icon-opened i {
+        color: #151515 !important;
+        z-index: 1;
+    }
 }
+    
