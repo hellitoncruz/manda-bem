@@ -40,7 +40,7 @@ video {
   }
 
   .navbar-brand {
-    z-index: 5000;
+    z-index: 50000000000000000000000;
     -webkit-overflow-scrolling: auto !important;
     overflow: visible
   }
@@ -48,7 +48,7 @@ video {
 .navbar {
     transition: background-color .4s ease-in-out;
     background: #fff;
-        z-index: 5000;
+        z-index: 500000000000000000000000;
         -webkit-overflow-scrolling: auto !important;
         overflow: visible
 }
