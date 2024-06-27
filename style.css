@@ -41,12 +41,16 @@ video {
 
   .navbar-brand {
     z-index: 5000;
+    -webkit-overflow-scrolling: auto !important;
+    overflow: visible
   }
 
 .navbar {
     transition: background-color .4s ease-in-out;
     background: #fff;
         z-index: 5000;
+        -webkit-overflow-scrolling: auto !important;
+        overflow: visible
 }
 
 @media (max-width: 768px) {
