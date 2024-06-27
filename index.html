@@ -59,6 +59,7 @@
 
 <body>
     <header>
+        <div id="nav-content-first"></div>
         <div class="container fixed-top" id="nav-container">
             <nav class="navbar navbar-expand-lg ">
                 <a class="navbar-brand" href="https://site.mandabem.com.br/">
@@ -160,7 +161,7 @@
     </div>
 
     <div class="  text-container mostrar">
-        <div class="text-content top-quote" id="first-section">
+        <div class="fade-in text-content top-quote" id="first-section">
             <p class="quote">"2 em cada 3 clientes desistem de comprar o seu produto porque o frete é caro.
                 <br>A <span class="text-bg"> Manda Bem</span> é a solução para ter um frete barato e eficiente! <br> "
             </p>
@@ -557,7 +558,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="brands_slider_container">
-                            <div class="owl-carousel owl-theme brands_slider">
+                            <div class="owl-carousel owl-theme partners_slider">
                                 <div class="owl-item">
                                     <div class="brands_item d-flex flex-column justify-content-center w-25">
                                         <a target="_blank" href=""><img alt=""
@@ -642,10 +643,33 @@
                                         </a>
                                     </div>
                                 </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25">
+                                        <a target="_blank" href="||target:%20_blank|"><img alt=""
+                                                src="https://site.mandabem.com.br/wp-content/uploads/2024/04/STARTUP-RIO.png">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25">
+                                        <a target="_blank" href="||target:%20_blank|"><img alt=""
+                                                src="https://site.mandabem.com.br/wp-content/uploads/2024/04/ALPIX.png">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="brands_item d-flex flex-column justify-content-center w-25">
+                                        <a target="_blank" href="||target:%20_blank|"><img alt=""
+                                                src="https://site.mandabem.com.br/wp-content/uploads/2024/04/WINOVE-1.png">
+                                        </a>
+                                    </div>
+                                </div>
 
-                            </div> <!-- Brands Slider Navigation -->
-                            <div class="brands_nav brands_prev"><i class="fas fa-chevron-left"></i></div>
-                            <div class="brands_nav brands_next"><i class="fas fa-chevron-right"></i></div>
+                                
+
+                            </div> 
+                            <div class="brands_nav partners_prev"><i class="fas fa-chevron-left"></i></div>
+                            <div class="brands_nav partners_next"><i class="fas fa-chevron-right"></i></div>
                         </div>
                     </div>
                 </div>
@@ -703,7 +727,7 @@
     </div>
 
     <div class=" text-container bottom-quote-container">
-        <div class="mostrar text-content bottom-quote">
+        <div class="fade-in text-content bottom-quote">
             <p class="quote"><span class="text-bg">9 entre 10 clientes</span> indicam a nossa plataforma para outros
                 lojistas.
             </p>
@@ -988,8 +1012,15 @@
         </div>
 
         <!-- SETA QUE DESCE -->
+
+        <!-- <div class="arrow arrow-down">
+                <a href="header">
+                    <i class="bi bi-chevron-double-down"></i>
+                </a>
+            </div> -->
+
         <div class="arrow arrow-to-top">
-            <a href="#nav-container">
+            <a href="#nav-content-first">
                 <i class="bi bi-chevron-double-down"></i>
             </a>
         </div>
@@ -1125,7 +1156,7 @@
 
         // -----------------------------------------------------------
 
-        // FUNÇÃO DO CARROSSEL DE MARCAS
+        // FUNÇÃO DO CARROSSEL DE INTEGRAÇÕES
         $(document).ready(function () {
             if ($('.brands_slider').length) {
                 var brandsSlider = $('.brands_slider');
@@ -1143,7 +1174,7 @@
                             autoWidth: false // Exibe 1 item em telas pequenas (mobile)
                         },
                         768: {
-                            items: 6 // Exibe 6 itens em telas maiores
+                            items: 5 // Exibe 6 itens em telas maiores
                         }
                     }
                 });
@@ -1159,6 +1190,46 @@
                     var next = $('.brands_next');
                     next.on('click', function () {
                         brandsSlider.trigger('next.owl.carousel');
+                    });
+                }
+            }
+        });
+
+        // -----------------------------------------------------------
+
+        // FUNÇÃO DO CARROSSEL DE PARCEIROS
+        $(document).ready(function () {
+            if ($('.partners_slider').length) {
+                var partnersSlider = $('.partners_slider');
+
+                partnersSlider.owlCarousel({
+                    loop: true,
+                    autoplay: true,
+                    autoplayTimeout: 5000,
+                    nav: false,
+                    dots: false,
+                    autoWidth: false,
+                    responsive: {
+                        0: {
+                            items: 1 // Exibe 1 item em telas pequenas (mobile)
+                        },
+                        768: {
+                            items: 1 // Exibe 6 itens em telas maiores
+                        }
+                    }
+                });
+
+                if ($('.partners_prev').length) {
+                    var prev = $('.partners_prev');
+                    prev.on('click', function () {
+                        partnersSlider.trigger('prev.owl.carousel');
+                    });
+                }
+
+                if ($('.partners_next').length) {
+                    var next = $('.partners_next');
+                    next.on('click', function () {
+                        partnersSlider.trigger('next.owl.carousel');
                     });
                 }
             }
@@ -1219,7 +1290,6 @@
         // -----------------------------------------------------------
 
         // Função de sroll que leva para o elemento da página
-
         $('.arrow a[href^="#"]').on('click', function (e) {
             e.preventDefault();
             var id = $(this).attr('href'),
@@ -1309,6 +1379,31 @@
                 }
             });
         });
+
+        $(document).ready(function () {
+            function checkScrollPosition() {
+                let scrollPosition = $(window).scrollTop();
+                let windowHeight = $(window).height();
+                
+                $('.fade-in').each(function () {
+                    let elementOffset = $(this).offset().top;
+                    let windowBottom = scrollPosition + windowHeight;
+
+                    if (elementOffset < windowBottom) {
+                        $(this).addClass('show-component');
+                    }
+                });
+            }
+
+            $(window).on('scroll', function () {
+                checkScrollPosition();
+            });
+
+            // Initial check on page load
+            checkScrollPosition();
+        });
+
+        
 
         // ------------------------------------------
 
