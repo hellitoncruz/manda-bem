@@ -142,14 +142,9 @@ video {
 header .navbar {
     padding: 0 30px !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: 1000000000000000000;
-    position: absolute;
+    
 }
 
-header  {
-    z-index: 1030000000000 !important;
-    position: absolute;
-}
 
 header .fixed-top {
     padding: 0 !important;
