@@ -1600,7 +1600,6 @@ footer .link-txt:hover {
     outline: 1px solid transparent;
     -webkit-perspective: inherit;
     perspective: inherit;
-    z-index: 2;
 }
 
 .services-content .container .back {
