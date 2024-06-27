@@ -40,12 +40,13 @@ video {
   }
 
   .navbar-brand {
-    z-index: 100000;
+    z-index: 5000;
   }
 
 .navbar {
     transition: background-color .4s ease-in-out;
     background: #fff;
+        z-index: 5000;
 }
 
 @media (max-width: 768px) {
