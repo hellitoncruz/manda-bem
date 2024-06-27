@@ -139,7 +139,7 @@ header .navbar {
 
 header .fixed-top {
     padding: 0 !important;
-    z-index: 1030000 !important;
+    z-index: 1030000000000 !important;
 }
 
 header .container {
