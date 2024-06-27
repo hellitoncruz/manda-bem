@@ -95,6 +95,7 @@
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <i class="bi bi-list"></i>
+                    <i class="bi bi-x"></i>
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -1346,27 +1347,25 @@
 
         // Função de contagem de números
         $(document).ready(function () {
-            var data1 = $('#data1');
-            var data2 = $('#data2');
-            var data3 = $('#data3');
-            var data4 = $('#data4');
+        var data1 = $('#data1');
+        var data2 = $('#data2');
+        var data3 = $('#data3');
+        var data4 = $('#data4');
 
-            function increment(i, max, element) {
-                if (i > max) return;
-                setTimeout(function () {
-                    element.text(Math.round(i));
-                    var numFormated = increment(i + (max / 100), max, element);
-                }, 10);
-            }
+        function increment(i, max, element) {
+            if (i > max) return;
+            setTimeout(function () {
+                element.text(Math.round(i).toLocaleString('pt-BR'));
+                increment(i + (max / 100), max, element);
+            }, 10);
+        }
 
-            increment(0, 70000, data1);
-            increment(0, 5570, data2);
-            increment(0, 5000000, data3);
-            increment(0, 500, data4);
-
-        });
-
-        // -----------------------------------------------------------
+        increment(0, 70000, data1);
+        increment(0, 5570, data2);
+        increment(0, 5000000, data3);
+        increment(0, 500, data4);
+    });
+    // -----------------------------------------------------------
 
 
         // FUNÇÃO CAROUSEL DE REVIEWS
@@ -1432,6 +1431,8 @@
 
                     if (elementOffset < windowBottom) {
                         $(this).addClass('show-component');
+
+
                     }
                 });
             }
