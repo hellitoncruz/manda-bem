@@ -110,8 +110,15 @@ video {
 .navbar i:hover::after,
 .navbar .nav-link:hover::after {
     width: 100%;
-    transition: 0.3s ease-in-out
+    transition: 0.3s ease-in-out;
+    color: #fff !important;
 }
+
+.onTop i:hover,
+.onTop .nav-link:hover {
+    color: #fff !important;
+}
+
 
 .onTop .nav-link,
 .onTop i {
@@ -129,7 +136,7 @@ video {
 
 .onTop .navbar .nav-link:hover,
 .onTop .navbar i:hover {
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1) !important;
 }
 
 header .navbar {

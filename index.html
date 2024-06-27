@@ -168,14 +168,6 @@
             </video>
 
 
-            <video preload="auto" playsinline="" loop="" muted="" data-play-sound="off" volume="5"
-                data-play-event="on_appear" data-appear-top-offset="full" data-controls-play-event="play_pause"
-                data-play-action="play_pause" data-ut-wait="" data-loaded="true"> </video>
-
-
-
-
-
 
 
             <div class="overlay">
@@ -737,19 +729,19 @@
                 </div>
                 <div class="col-md-3 data-box">
                     <img src="https://site.mandabem.com.br/wp-content/uploads/2023/06/icone_municipio-1.svg" alt="">
-                    <span class="data-value" id="data2">0000</span>
+                    <span class="mostrar data-value" id="data2">0000</span>
                     <p class="data-description">MUNICÍPIOS ATENDIDOS</p>
                 </div>
                 <div class="col-md-3 data-box">
                     <img src="https://site.mandabem.com.br/wp-content/uploads/2023/06/icone_envio-2.svg" alt="">
-                    <div class="data-value-container">
+                    <div class="mostrar data-value-container">
                         <span class="data-value" id="data3">0000000</span><span class="sufix">+</span>
                     </div>
                     <p class="data-description">ENVIOS</p>
                 </div>
                 <div class="col-md-3 data-box">
                     <img src="https://site.mandabem.com.br/wp-content/uploads/2023/06/icone_nuvem-1.svg" alt="">
-                    <div class="data-value-container">
+                    <div class="mostrar data-value-container">
                         <span class="data-value" id="data4">000</span><span class="sufix">+</span>
                     </div>
                     <p class="data-description">AVALIAÇÕES POSITIVAS NA NUVEMSHOP</p>
@@ -1193,15 +1185,18 @@
     var originalLogoSrc = "https://site.mandabem.com.br/wp-content/uploads/2023/06/logo_manda_bem_200-2.png";
     var newLogoSrc = "https://site.mandabem.com.br/wp-content/uploads/2023/06/logo_manda_bem_200-2.png"; // Troque para a nova logo se for diferente
 
-    $navbarNav.on('show.bs.collapse', function () {
-        $logoImgDesk.attr('src', newLogoSrc);
-        $logoImgMob.attr('src', newLogoSrc);
-    });
+    function toggleLogo() {
+        if ($navbarNav.hasClass('show')) {
+            $logoImgDesk.attr('src', newLogoSrc);
+            $logoImgMob.attr('src', newLogoSrc);
+        } else {
+            $logoImgDesk.attr('src', originalLogoSrc);
+            $logoImgMob.attr('src', originalLogoSrc);
+        }
+    }
 
-    $navbarNav.on('hidden.bs.collapse', function () { // Use 'hidden.bs.collapse' para garantir que a ação ocorra após o colapso
-        $logoImgDesk.attr('src', originalLogoSrc);
-        $logoImgMob.attr('src', originalLogoSrc);
-    });
+    $navbarNav.on('show.bs.collapse', toggleLogo);
+    $navbarNav.on('hide.bs.collapse', toggleLogo);
 });
 
         
